@@ -6265,6 +6265,37 @@ p-try@^1.0.0:
   resolved "http://registry.npm.taobao.org/p-try/download/p-try-1.0.0.tgz#cbc79cdbaf8fd4228e13f621f2b1a237c1b207b3"
   integrity sha1-y8ec26+P1CKOE/Yh8rGiN8GyB7M=
 
+pages-tasks@latest:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/pages-tasks/-/pages-tasks-0.1.0.tgz#6805706e45f75849cac17d0e089e6d962e2f7485"
+  integrity sha512-oe4fidMbqNVUEwD1+5pxs5GZnPfIYx/aXml+YRVDU2qzWPJsf5dvejahYvxK4PCsmsZN1Bb04OqgR64bA85miw==
+  dependencies:
+    "@babel/core" "^7.4.3"
+    "@babel/preset-env" "^7.4.3"
+    autoprefixer "^9.5.1"
+    browser-sync "^2.26.3"
+    bs-html-injector "^3.0.3"
+    csscomb "^4.3.0"
+    cssnano "^4.1.10"
+    del "^4.1.0"
+    gulp "^4.0.1"
+    gulp-babel "^8.0.0"
+    gulp-beautify "^3.0.0"
+    gulp-gh-pages "^0.5.4"
+    gulp-htmlmin "^5.0.1"
+    gulp-if "^2.0.2"
+    gulp-imagemin "^5.0.3"
+    gulp-load-plugins "^1.5.0"
+    gulp-plumber "^1.2.1"
+    gulp-postcss "^8.0.0"
+    gulp-sass "^4.0.2"
+    gulp-size "^3.0.0"
+    gulp-swig "^0.9.1"
+    gulp-uglify "^3.0.2"
+    gulp-useref "^3.1.6"
+    minimist "^1.2.0"
+    standard "^12.0.1"
+
 param-case@2.1.x:
   version "2.1.1"
   resolved "http://registry.npm.taobao.org/param-case/download/param-case-2.1.1.tgz#df94fd8cf6531ecf75e6bef9a0858fbc72be2247"
@@ -8434,9 +8465,9 @@ uglify-js@3.4.x:
     source-map "~0.6.1"
 
 uglify-js@^3.0.5:
-  version "3.5.5"
-  resolved "http://registry.npm.taobao.org/uglify-js/download/uglify-js-3.5.5.tgz#9c5aaaf3a7586fbf559df31fa6d3bca1b3ba7e9b"
-  integrity sha1-nFqq86dYb79VnfMfptO8obO6fps=
+  version "3.5.6"
+  resolved "http://registry.npm.taobao.org/uglify-js/download/uglify-js-3.5.6.tgz#8a5f8a06ee7415ac1fa302f4623bc7344b553da4"
+  integrity sha1-il+KBu50FawfowL0YjvHNEtVPaQ=
   dependencies:
     commander "~2.20.0"
     source-map "~0.6.1"

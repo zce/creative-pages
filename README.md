@@ -1,4 +1,4 @@
-# pages-boilerplate
+# creative-pages
 
 [![Build Status][travis-image]][travis-url]
 [![License][license-image]][license-url]
@@ -9,16 +9,6 @@
 > A boilerplate for static pages
 
 ## Getting Started
-
-```shell
-# clone repo
-$ git clone https://github.com/zce/pages-boilerplate.git my-pages
-$ cd my-pages
-# install deps
-$ yarn # or npm install
-```
-
-## Usage
 
 ```shell
 $ yarn <task> [options]
@@ -149,13 +139,13 @@ $ yarn add @babel/core @babel/preset-env autoprefixer browser-sync bs-html-injec
 
 
 
-[travis-image]: https://travis-ci.org/zce/pages-boilerplate.svg?branch=master
-[travis-url]: https://travis-ci.org/zce/pages-boilerplate
-[license-image]: https://img.shields.io/github/license/zce/pages-boilerplate.svg
-[license-url]: https://github.com/zce/pages-boilerplate/blob/master/LICENSE
-[dependency-image]: https://img.shields.io/david/zce/pages-boilerplate.svg
-[dependency-url]: https://david-dm.org/zce/pages-boilerplate
-[devdependency-image]: https://img.shields.io/david/dev/zce/pages-boilerplate.svg
-[devdependency-url]: https://david-dm.org/zce/pages-boilerplate?type=dev
+[travis-image]: https://travis-ci.org/zce/creative-pages.svg?branch=master
+[travis-url]: https://travis-ci.org/zce/creative-pages
+[license-image]: https://img.shields.io/github/license/zce/creative-pages.svg
+[license-url]: https://github.com/zce/creative-pages/blob/master/LICENSE
+[dependency-image]: https://img.shields.io/david/zce/creative-pages.svg
+[dependency-url]: https://david-dm.org/zce/creative-pages
+[devdependency-image]: https://img.shields.io/david/dev/zce/creative-pages.svg
+[devdependency-url]: https://david-dm.org/zce/creative-pages?type=dev
 [style-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 [style-url]: http://standardjs.com

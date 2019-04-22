@@ -24,7 +24,7 @@
     "files.exclude": {
       "node_modules": true,
       "temp": true,
-      "pages.code-workspace": true
+      "creative-pages.code-workspace": true
     }
   }
 }
