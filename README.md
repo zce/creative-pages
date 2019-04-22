@@ -82,6 +82,8 @@ Deploy build results to [GitHub Pages](https://pages.github.com).
    │  │  └─ styles ··································· styles (scss / postcss)
    │  │     ├─ _variables.scss ······················· partial file (dont output)
    │  │     └─ main.scss ····························· entry scss file
+   │  ├─ data ········································ data
+   │  │  └─ menu.yml ································· data file
    │  ├─ layouts ····································· layouts (dont output)
    │  │  └─ basic.html ······························· layout file
    │  ├─ partials ···································· partials (dont output)
@@ -101,26 +103,10 @@ Deploy build results to [GitHub Pages](https://pages.github.com).
    └─ yarn.lock ······································ yarn lock file
 ```
 
-## Dependencies
+## Related
 
-```sh
-$ yarn add @babel/core @babel/preset-env autoprefixer browser-sync bs-html-injector csscomb cssnano del gulp gulp-babel gulp-beautify gulp-gh-pages gulp-htmlmin gulp-if gulp-imagemin gulp-load-plugins gulp-plumber gulp-postcss gulp-sass gulp-size gulp-swig gulp-uglify gulp-useref minimist standard --dev
-```
-
-## Todos
-
-- [ ] pump or pipe
-- [ ] dart-sass or node-sass?
-- [ ] data directory
-- [ ] content directory
-
-## References
-
-- https://github.com/gulpjs/gulp/tree/master/docs/why-use-pump
-- https://www.jianshu.com/p/0572e8e115da
-- https://github.com/colynb/gulp-swig
-- https://github.com/gulpjs/gulp/blob/master/docs/recipes/templating-with-swig-and-yaml-front-matter.md
-- https://github.com/BrowserSync/recipes/tree/master/recipes/gulp.swig
+- [zce/pages-tasks](https://github.com/zce/pages-tasks) - A preset static pages project gulp tasks.
+- [zce/pages-boilerplate](https://github.com/zce/pages-boilerplate) - Always a pleasure scaffolding your awesome static sites.
 
 ## Contributing
 
