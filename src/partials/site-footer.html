@@ -1,0 +1,69 @@
+<footer class="site-footer">
+  <div class="container">
+    <aside class="site-widget">
+      <section class="site-widget-follow">
+        <h4>Follow me</h4>
+        <p>Get all the latest & greatest posts delivered straight to your inbox.</p>
+        <form class="input-group" action="/subscribe/" method="post">
+          <input class="form-control" type="email" name="email" placeholder="Input your email" autocomplete="off" aria-label="Input your email" aria-describedby="btn_send" />
+          <input type="hidden" name="confirm" />
+          <input type="hidden" name="location" />
+          <input type="hidden" name="referrer" />
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" id="btn_send" title="订阅" aria-label="订阅">{{ tags.icon('send') }}</button>
+          </div>
+        </form>
+        <ul>
+          <li><a href="https://twitter.com/w_zce" title="Twitter" target="_blank" rel="noopener">{{ tags.brand('twitter') }}</a></li>
+          <li><a href="https://www.facebook.com/zccce" title="Facebook" target="_blank" rel="noopener">{{ tags.brand('facebook') }}</a></li>
+          {# <li><a href="https://www.linkedin.com/in/zceme" title="LinkedIn" target="_blank" rel="noopener">{{ tags.brand('linkedin') }}</a></li> #}
+          <li><a href="https://github.com/zce" title="GitHub" target="_blank" rel="noopener">{{ tags.brand('github') }}</a></li>
+          <li><a href="https://www.youtube.com/channel/UCFUwWB0v2qYqLaB95z1nv9Q" title="YouTube" target="_blank" rel="noopener">{{ tags.brand('youtube') }}</a></li>
+          <li><a href="https://weibo.com/zceme" title="Weibo" target="_blank" rel="noopener">{{ tags.brand('weibo') }}</a></li>
+          <li><a href="#" title="WeChat" target="_blank" rel="noopener">{{ tags.brand('weixin') }}</a></li>
+          <li><a href="#" title="QQ" target="_blank" rel="noopener">{{ tags.brand('qq') }}</a></li>
+          <li><a href="https://i.youku.com/zcezce" title="YouKu" target="_blank" rel="noopener">{{ tags.brand('youku') }}</a></li>
+          <li><a href="https://feedly.com/i/subscription/feed/{{ site.url }}/rss/" title="RSS" target="_blank" rel="noopener">{{ tags.icon('rss') }}</a></li>
+        </ul>
+      </section>
+      <section class="site-widget-tags">
+        <h4>Tags</h4>
+        <ul>
+          <li><a href="/topic/tutorial/">Tutorial</a></li>
+          <li><a href="/topic/getting-started/">Getting Started</a></li>
+          <li><a href="/topic/fiction/">Fiction</a></li>
+          <li><a href="/topic/course/">Course</a></li>
+          <li><a href="/topic/speeches/">Speeches</a></li>
+          <li><a href="/topic/blog/">Blog</a></li>
+          <li><a href="/topic/podcast/">Podcast</a></li>
+          <li><a href="/topic/tech/">Tech</a></li>
+          <li><a href="/topic/fables/">Fables</a></li>
+          <li><a href="/topic/ajax/">ajax</a></li>
+        </ul>
+      </section>
+      <section class="site-widget-links">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="/story/">{{ tags.icon('link') }} Story</a></li>
+          <li><a href="/about/">{{ tags.icon('link') }} About</a></li>
+          <li><a href="/contact/">{{ tags.icon('link') }} Contact</a></li>
+          <li><a href="/archive/">{{ tags.icon('link') }} Archive</a></li>
+          <li><a href="/privacy-policy/">{{ tags.icon('link') }} Privacy</a></li>
+          <li><a href="/terms-of-service/">{{ tags.icon('link') }} Terms</a></li>
+        </ul>
+      </section>
+      <section class="site-widget-subscription">
+        <h4>Subscription</h4>
+        <img src="https://s.uieee.com/qrcode/wedn.jpg" alt="WEDN" />
+      </section>
+    </aside>
+    <div class="site-info">
+      <span>&copy; {{ site.date | date('Y') }} <a href="{{ site.url }}">{{ site.title }}</a>. All Rights Reserved.</span>
+      <ul>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/terms-of-service/">Terms of Service</a></li>
+      </ul>
+      <span>&lt;/&gt; with <i class="heart">&hearts;</i> by <a href="{{ site.author.url }}">{{ site.author.name }}</a></span>
+    </div>
+  </div>
+</footer>

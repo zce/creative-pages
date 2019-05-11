@@ -1,3 +1,5 @@
+{% import '../partials/tags.html' as tags %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +8,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="zce">
   <title>{{ current | title }} · {{ site.title | title }}</title>
-
-  <link rel="canonical" href="https://zce.me">
 
   <!-- build:css assets/styles/vendor.css -->
   <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
@@ -20,11 +20,16 @@
 </head>
 
 <body>
-  {% include '../partials/header.html' %}
+  <header class="site-header">
+    {% include '../partials/site-nav.html' %}
+    {% block header %}{% endblock %}
+  </header>
 
-  {% block body %}{% endblock %}
+  <main class="site-main" role="main">
+    {% block body %}{% endblock %}
+  </main>
 
-  {% include '../partials/footer.html' %}
+  {% include '../partials/site-footer.html' %}
 
   <!-- build:js assets/scripts/vendor.js -->
   <script src="/node_modules/jquery/dist/jquery.js"></script>

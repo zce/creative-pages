@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+@import 'node_modules/bootstrap/scss/mixins';
+
+@mixin link ($underline: true, $color: inherit) {
+  a {
+    color: $color;
+
+    @include hover-focus {
+      opacity: 0.8;
+
+      @if $underline {
+        border-bottom: $border-width solid currentColor;
+      }
+    }
+  }
+}
+
+@mixin row ($gutter: true) {
+  display: flex;
+  flex-wrap: wrap;
+  @if $gutter {
+    margin-right: ($grid-gutter-width / -2);
+    margin-left: ($grid-gutter-width / -2);
+  }
+}
+
+@mixin column ($breakpoint-columns: (), $gutter: true) {
+  position: relative;
+  min-height: 1px; // Prevent collapsing
+  width: 100%;
+  @if $gutter {
+    padding-right: ($grid-gutter-width / 2);
+    padding-left: ($grid-gutter-width / 2);
+  }
+
+  @each $breakpoint, $column in $breakpoint-columns {
+    @include media-breakpoint-up($breakpoint) {
+      @include make-col($column);
+    }
+  }
+}
+
+@mixin inner ($width: 50rem) {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $width;
+}
+
+@mixin display ($size: 3) {
+  font-weight: map-get(map-get($displays, $size), 'weight');
+  font-size: map-get(map-get($displays, $size), 'size');
+  line-height: $display-line-height;
+}
+
+@mixin lead {
+  font-weight: $lead-font-weight;
+  font-size: $lead-font-size;
+}

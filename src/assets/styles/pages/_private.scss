@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the private page.
+// -----------------------------------------------------------------------------
+
+.private-template {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .title {
+    @include display(4);
+  }
+
+  .description {
+    @include lead;
+  }
+
+  .is-error {
+    color: color('red');
+  }
+
+  form {
+    margin-bottom: spacer(5);
+    padding: spacer(5);
+    width: 20rem;
+    border-radius: $card-border-radius;
+    background: $card-bg;
+    box-shadow: $box-shadow;
+  }
+
+  .btn {
+    margin-top: spacer(2);
+    width: 100%;
+  }
+}

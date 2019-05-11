@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass placeholders%
+// -----------------------------------------------------------------------------
+
+@each $size, $value in $displays {
+  %display-#{$size} {
+    @include display($size);
+  }
+}
+
+%lead {
+  @include lead;
+}
+
+%inner {
+  @include inner;
+}

@@ -1,0 +1,75 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the tag card component.
+// -----------------------------------------------------------------------------
+
+.tag-card {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: spacer(5);
+  padding: spacer(5);
+  border-radius: $card-border-radius;
+  background: $featured-img-bg center / cover;
+  box-shadow: $box-shadow;
+  color: theme-color('light');
+  text-align: center;
+
+  @include link(false);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $featured-img-cover;
+    content: '';
+
+    backdrop-filter: blur(2px);
+  }
+
+  &-title {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    font-size: $h1-font-size;
+
+    @include text-truncate;
+  }
+
+  &-subtitle {
+    z-index: 5;
+    margin-top: spacer(2);
+    color: theme-color-level('light', 1);
+
+    &::before,
+    &::after {
+      margin: 0 spacer(2);
+      content: '\2014';
+    }
+  }
+
+  &-divider {
+    margin: spacer(2);
+  }
+
+  &-list {
+    z-index: 5;
+    margin-bottom: spacer(3);
+
+    @include list-unstyled;
+
+    li {
+      padding: spacer(3);
+      border-bottom: $border-width solid rgba($border-color, 0.4);
+      font-weight: $font-weight-light;
+    }
+  }
+
+  &-footer {
+    z-index: 5;
+  }
+}

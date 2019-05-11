@@ -1,65 +1,72 @@
-// TODO: site styles
+// -----------------------------------------------------------------------------
+// Style entry file
+// -----------------------------------------------------------------------------
 
-// @import 'node_modules/bootstrap/scss/bootstrap';
-@import 'variables';
+@charset 'UTF-8';
 
-@import 'icons';
+// abstracts
+// --------------------------------------------------
 
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/placeholders';
 
-.jumbotron {
-  margin-bottom: 0;
-  padding-top: $jumbotron-padding;
-  padding-bottom: $jumbotron-padding;
-  background-color: $jumbotron-bg;
+// vendors
+// --------------------------------------------------
 
-  @media (min-width: 768px) {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
+@import 'vendors/bootstrap';
 
-  .jumbotron-heading {
-    font-weight: 300;
-  }
+// base
+// --------------------------------------------------
 
-  .container {
-    max-width: 40rem;
-  }
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/code';
+@import 'base/helpers';
+@import 'base/global';
 
-  p:last-child {
-    margin-bottom: 0;
-  }
-}
+// layout
+// --------------------------------------------------
 
-.site-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  font-family: monospace;
+@import 'layout/grid';
+@import 'layout/forms';
+@import 'layout/wrapper';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/main';
+@import 'layout/sidebar';
+@import 'layout/footer';
 
-  a {
-    text-decoration: none;
-  }
+// components
+// --------------------------------------------------
 
-  @keyframes beat {
-    from,
-    to {
-      transform: none;
-    }
+@import 'components/buttons';
+@import 'components/navigation';
+@import 'components/pagination';
+@import 'components/dropdown';
+@import 'components/prism';
+@import 'components/subscribe';
+@import 'components/koenig';
+@import 'components/post';
+@import 'components/tag-card';
 
-    50% {
-      transform: scale3d(1.4, 1.4, 1.4);
-    }
-  }
+// pages
+// --------------------------------------------------
 
-  .heart {
-    display: inline-block;
-    color: #f20;
-    font-weight: normal;
-    font-style: normal;
-    animation: beat 0.4s ease-in-out infinite;
-  }
-}
+@import 'pages/home';
+@import 'pages/index';
+@import 'pages/tag';
+@import 'pages/author';
+@import 'pages/page';
+@import 'pages/post';
+@import 'pages/custom';
+@import 'pages/amp';
+@import 'pages/subscribe';
+@import 'pages/private';
+@import 'pages/error';
+
+// themes
+// --------------------------------------------------
+
+@import 'themes/default';

@@ -1,0 +1,66 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.site-header {
+  position: relative;
+}
+
+.site-heading {
+  padding: 10vw 4vw;
+  color: theme-color('light');
+  text-align: center;
+
+  .no-cover & {
+    color: theme-color('dark');
+  }
+}
+
+.site-title {
+  font-weight: $font-weight-bold;
+  font-size: $display3-size;
+}
+
+.site-description {
+  @extend %lead;
+}
+
+.site-cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  overflow: hidden;
+  padding-top: percentage(10 / 16);
+  min-height: 80vh;
+  background-size: 0;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+  }
+
+  &::before {
+    background: no-repeat center / cover;
+    background-color: theme-color('dark');
+    background-image: inherit;
+    // hack enable GPU
+    transform: translateZ(0);
+
+    @include media-breakpoint-up(lg) {
+      // ios not support background-attachment: fixed
+      background-attachment: fixed;
+    }
+  }
+
+  &::after {
+    background: $cover-overlay;
+  }
+}
