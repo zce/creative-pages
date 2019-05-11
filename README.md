@@ -1,94 +1,99 @@
 # creative-pages
 
 [![Build Status][travis-image]][travis-url]
+[![Package Version][version-image]][version-url]
 [![License][license-image]][license-url]
 [![Dependency Status][dependency-image]][dependency-url]
 [![devDependency Status][devdependency-image]][devdependency-url]
 [![Code Style][style-image]][style-url]
 
-> A boilerplate for static pages
+> A creative pages for adapting to different platforms
 
-## Getting Started
+## Usage
 
 ```shell
 $ yarn <task> [options]
+```
 
-# e.g.
+### e.g.
+
+```shell
+# Runs the app in development mode
 $ yarn serve --port 5210 --open
+# Builds the app for production to the `dist` folder
 $ yarn build --production
 ```
 
-## All Tasks
+### Available Scripts
 
-### lint
+#### `yarn lint` or `npm run lint`
 
-Lint styles & scripts files.
+Lint the styles & scripts files.
 
-### clean
+#### `yarn compile` or `npm run compile`
 
-Clean dist & temp files.
+Compile the styles & scripts & pages file.
 
-### compile
+#### `yarn serve` or `npm run serve`
 
-Compile styles & scripts & pages file.
+Runs the app in development mode with a automated server.
 
-### serve
+##### options
 
-Running an automated development server.
+- `open`: Open browser on start, Default: `false`
+- `port`: Specify server port, Default: `2080`
 
-#### options
+#### `yarn build` or `npm run build`
 
-- `port`: Server port, Default: `2080`
-- `open`: Automatically open browser, Default: `true`
+Builds the app for production to the `dist` folder. It minify source in production mode for the best performance.
 
-### build
+##### options
 
-Build the entire project to get releasable files.
-
-- `production`: Production mode, Default: `false`
+- `production`: Production mode flag, Default: `false`
 - `prod`: Alias to `production`
 
-### start
+#### `yarn start` or `npm run start`
 
 Running projects in production mode.
 
-#### options
+##### options
 
-- `port`: Server port, Default: `2080`
-- `open`: Automatically open browser, Default: `false`
+- `open`: Open browser on start, Default: `false`
+- `port`: Specify server port, Default: `2080`
 
-### deploy
+#### `yarn deploy` or `npm run deploy`
 
-Deploy build results to [GitHub Pages](https://pages.github.com).
+Deploy the `dist` folder to [GitHub Pages](https://pages.github.com).
 
-#### options
+##### options
 
 - `branch`: The name of the branch you'll be pushing to, Default: `'gh-pages'`
+
+#### `yarn clean` or `npm run clean`
+
+Clean the `dist` & `temp` files.
 
 ## Folder Structure
 
 ```
-└── my-pages ········································· proj root
-   ├─ public ········································· static
-   │  └─ .gitkeep ···································· static file (unprocessed)
-   ├─ src ············································ source
-   │  ├─ assets ······································ assets
-   │  │  ├─ fonts ···································· fonts
-   │  │  │  └─ .gitkeep ······························ font file
-   │  │  ├─ images ··································· images
-   │  │  │  └─ .gitkeep ······························ image file
-   │  │  ├─ scripts ·································· scripts (babel / uglify)
-   │  │  │  └─ .gitkeep ······························ script file
-   │  │  └─ styles ··································· styles (scss / postcss)
-   │  │     ├─ _variables.scss ······················· partial file (dont output)
-   │  │     └─ main.scss ····························· entry scss file
-   │  ├─ data ········································ data
-   │  │  └─ menu.yml ································· data file
-   │  ├─ layouts ····································· layouts (dont output)
-   │  │  └─ basic.html ······························· layout file
-   │  ├─ partials ···································· partials (dont output)
-   │  │  ├─ footer.html ······························ partial file
-   │  │  └─ header.html ······························ partial file
+└── my-awesome-pages ································· project root
+   ├─ public ········································· static folder
+   │  └─ favicon.ico ································· static file (unprocessed)
+   ├─ src ············································ source folder
+   │  ├─ assets ······································ assets folder
+   │  │  ├─ fonts ···································· fonts folder
+   │  │  │  └─ pages.ttf ····························· font file (imagemin)
+   │  │  ├─ images ··································· images folder
+   │  │  │  └─ logo.png ······························ image file (imagemin)
+   │  │  ├─ scripts ·································· scripts folder
+   │  │  │  └─ main.js ······························· script file (babel / uglify)
+   │  │  └─ styles ··································· styles folder
+   │  │     ├─ _variables.scss ······················· partial sass file (dont output)
+   │  │     └─ main.scss ····························· entry scss file (scss / postcss)
+   │  ├─ layouts ····································· layouts folder
+   │  │  └─ basic.html ······························· layout file (dont output)
+   │  ├─ partials ···································· partials folder
+   │  │  └─ header.html ······························ partial file (dont output)
    │  ├─ about.html ·································· page file (use layout & partials)
    │  └─ index.html ·································· page file (use layout & partials)
    ├─ .csscomb.json ·································· csscomb config file
@@ -103,11 +108,6 @@ Deploy build results to [GitHub Pages](https://pages.github.com).
    └─ yarn.lock ······································ yarn lock file
 ```
 
-## Related
-
-- [zce/pages-tasks](https://github.com/zce/pages-tasks) - A preset static pages project gulp tasks.
-- [zce/pages-boilerplate](https://github.com/zce/pages-boilerplate) - Always a pleasure scaffolding your awesome static sites.
-
 ## Contributing
 
 1. **Fork** it on GitHub!
@@ -121,12 +121,14 @@ Deploy build results to [GitHub Pages](https://pages.github.com).
 
 ## License
 
-[MIT](LICENSE) &copy; [汪磊](https://zce.me)
+[MIT](LICENSE) &copy; zce <w@zce.me> (https://zce.me)
 
 
 
-[travis-image]: https://travis-ci.org/zce/creative-pages.svg?branch=master
+[travis-image]: https://img.shields.io/travis/zce/creative-pages.svg
 [travis-url]: https://travis-ci.org/zce/creative-pages
+[version-image]: https://img.shields.io/github/package-json/v/zce/creative-pages.svg
+[version-url]: https://github.com/zce/creative-pages
 [license-image]: https://img.shields.io/github/license/zce/creative-pages.svg
 [license-url]: https://github.com/zce/creative-pages/blob/master/LICENSE
 [dependency-image]: https://img.shields.io/david/zce/creative-pages.svg
