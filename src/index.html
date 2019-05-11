@@ -1,25 +1,6 @@
 {% set current = 'home' %}
 {% extends 'layouts/basic.html' %}
 
-{% block styles %}
-<style>
-  .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-  }
-</style>
-{% endblock %}
-
 {% block header %}
 <div class="site-heading container">
   <h1 class="site-title">{{ site.title | upper }}</h1>
@@ -30,30 +11,476 @@
 {% endblock %}
 
 {% block body %}
-<div class="py-5 bg-light">
+<section class="site-section">
   <div class="container">
-    <div class="row">
-      {% for item in [1, 2, 3, 4, 5, 6] %}
-      <div class="col-md-6 col-lg-4">
-        <div class="card mb-4 shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-          </svg>
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <span class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-              </span>
-              <small class="text-muted">{{ item }} mins</small>
-            </div>
+    <article class="post-primary" role="main">
+      <figure class="post-primary-figure">
+        <a href="/2010/01/the-editor/"
+          ><img
+            src="https://casper.ghost.org/v2.0.0/images/writing-posts-with-ghost.jpg"
+            alt="Writing posts with Ghost ✍️"
+        /></a>
+      </figure>
+      <div class="post-primary-body">
+        <h2 class="post-primary-title">Writing posts with Ghost ✍️</h2>
+        <div class="post-primary-content">
+          <p>
+            Ghost has a powerful visual editor with familiar formatting options, as well as the ability to
+            seamlessly add dynamic content.
+          </p>
+          <p>
+            Select the text to add formatting, headers or create links, or use Markdown shortcuts to do the work
+            for you - if that's your thing.
+          </p>
+          <figure class="kg-card kg-image-card">
+            <img src="https://casper.ghost.org/v2.0.0/images/formatting-editor-demo.gif" class="kg-image" />
+          </figure>
+
+          <h2 id="rich-editing-at-your-fingertips">Rich editing at your fingertips</h2>
+          <p>The editor can also handle rich media objects, called <strong>cards</strong>.</p>
+          <p>
+            You can insert a card either by clicking the <code>+</code> button on a new line, or typing
+            <code>/</code> on a new line to search for a particular card. This allows you to efficiently
+            insert<strong> images</strong>, <strong>markdown</strong>, <strong>html</strong> and
+            <strong>embeds</strong>.
+          </p>
+          <p><strong>For Example</strong>:</p>
+          <ul>
+            <li>Insert</li>
+          </ul>
+        </div>
+        <a class="btn btn-outline-secondary" href="/2010/01/the-editor/"
+          >继续阅读 <span aria-hidden="true">&rarr;</span></a
+        >
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="site-section">
+  <div class="container">
+    <header>
+      <h2>近期文章</h2>
+      <p>记录生活中的点点滴滴</p>
+    </header>
+    <div class="post-feed">
+      <article class="post-card">
+        <figure class="post-card-figure">
+          <a href="/2018/12/ajax/" title="AJAX">
+            <svg class="thumbnail" aria-hidden="true">
+              <text text-anchor="middle" x="50%" y="50%" font-size="3em">AJAX</text>
+            </svg>
+          </a>
+        </figure>
+        <div class="post-card-body">
+          <a href="/2018/12/ajax/" class="post-card-link"></a>
+          <span class="post-card-tag">Course</span>
+          <h3 class="post-card-title">AJAX</h3>
+          <p class="post-card-excerpt">...</p>
+          <div class="post-card-meta">
+            <ul class="post-card-authors">
+              <li>
+                <a href="/author/zce/" title="汪磊"
+                  ><img src="https://zce-sandbox.uieee.com/2018/10/avatar-180.png" alt="汪磊"
+                /></a>
+              </li>
+            </ul>
+            <small class="post-card-reading-time">1 分钟读完</small>
           </div>
         </div>
+      </article>
+      <article class="post-card">
+        <figure class="post-card-figure">
+          <a href="/2018/11/titanic/" title="泰坦尼克号">
+            <img
+              src="/assets/dist/empty.svg?v=7aa9d6624c"
+              alt="泰坦尼克号"
+              data-src="https://images.unsplash.com/photo-1533891533906-1f958683d70f?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;1080&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ"
+            />
+          </a>
+        </figure>
+        <div class="post-card-body">
+          <a href="/2018/11/titanic/" class="post-card-link"></a>
+          <span class="post-card-tag">未加标签</span>
+          <h3 class="post-card-title">泰坦尼克号</h3>
+          <p class="post-card-excerpt">
+            简介1912年4月10日，承载着民众万千希望的豪华游轮泰坦尼克号鸣着震耳欲聋的汽...
+          </p>
+          <div class="post-card-meta">
+            <ul class="post-card-authors">
+              <li>
+                <a href="/author/zce/" title="汪磊"
+                  ><img src="https://zce-sandbox.uieee.com/2018/10/avatar-180.png" alt="汪磊"
+                /></a>
+              </li>
+            </ul>
+            <small class="post-card-reading-time">1 分钟读完</small>
+          </div>
+        </div>
+      </article>
+      <article class="post-card">
+        <figure class="post-card-figure">
+          <a href="/2018/11/gallery-images/" title="Gallery images">
+            <svg class="thumbnail" aria-hidden="true">
+              <text text-anchor="middle" x="50%" y="50%" font-size="3em">Gallery images</text>
+            </svg>
+          </a>
+        </figure>
+        <div class="post-card-body">
+          <a href="/2018/11/gallery-images/" class="post-card-link"></a>
+          <span class="post-card-tag">未加标签</span>
+          <h3 class="post-card-title">Gallery images</h3>
+          <p class="post-card-excerpt">...</p>
+          <div class="post-card-meta">
+            <ul class="post-card-authors">
+              <li>
+                <a href="/author/zce/" title="汪磊"
+                  ><img src="https://zce-sandbox.uieee.com/2018/10/avatar-180.png" alt="汪磊"
+                /></a>
+              </li>
+            </ul>
+            <small class="post-card-reading-time">1 分钟读完</small>
+          </div>
+        </div>
+      </article>
+      <article class="post-card">
+        <figure class="post-card-figure">
+          <a href="/2018/11/code-highlight/" title="Code highlight">
+            <svg class="thumbnail" aria-hidden="true">
+              <text text-anchor="middle" x="50%" y="50%" font-size="3em">Code highlight</text>
+            </svg>
+          </a>
+        </figure>
+        <div class="post-card-body">
+          <a href="/2018/11/code-highlight/" class="post-card-link"></a>
+          <span class="post-card-tag">Blog</span>
+          <h3 class="post-card-title">Code highlight</h3>
+          <p class="post-card-excerpt">Code highlight with https://prismjs.com/...</p>
+          <div class="post-card-meta">
+            <ul class="post-card-authors">
+              <li>
+                <a href="/author/zce/" title="汪磊"
+                  ><img src="https://zce-sandbox.uieee.com/2018/10/avatar-180.png" alt="汪磊"
+                /></a>
+              </li>
+            </ul>
+            <small class="post-card-reading-time">2 分钟读完</small>
+          </div>
+        </div>
+      </article>
+      <article class="post-card">
+        <figure class="post-card-figure">
+          <a href="/2018/11/embed/" title="Embed first">
+            <svg class="thumbnail" aria-hidden="true">
+              <text text-anchor="middle" x="50%" y="50%" font-size="3em">Embed first</text>
+            </svg>
+          </a>
+        </figure>
+        <div class="post-card-body">
+          <a href="/2018/11/embed/" class="post-card-link"></a>
+          <span class="post-card-tag">未加标签</span>
+          <h3 class="post-card-title">Embed first</h3>
+          <p class="post-card-excerpt">Cover normalCover wideCover full width...</p>
+          <div class="post-card-meta">
+            <ul class="post-card-authors">
+              <li>
+                <a href="/author/zce/" title="汪磊"
+                  ><img src="https://zce-sandbox.uieee.com/2018/10/avatar-180.png" alt="汪磊"
+                /></a>
+              </li>
+            </ul>
+            <small class="post-card-reading-time">1 分钟读完</small>
+          </div>
+        </div>
+      </article>
+      <article class="post-card">
+        <figure class="post-card-figure">
+          <a href="/2018/08/welcome-2/" title="Welcome to Ghost">
+            <img
+              src="/assets/dist/empty.svg?v=7aa9d6624c"
+              alt="Welcome to Ghost"
+              data-src="https://casper.ghost.org/v2.0.0/images/welcome-to-ghost.jpg"
+            />
+          </a>
+        </figure>
+        <div class="post-card-body">
+          <a href="/2018/08/welcome-2/" class="post-card-link"></a>
+          <span class="post-card-tag">Getting Started</span>
+          <h3 class="post-card-title">Welcome to Ghost</h3>
+          <p class="post-card-excerpt">
+            Welcome, it's great to have you here. We know that first impressions are important, so we've populated
+            your new site with some initial getting started posts that will help you get familiar with everything
+            in no time....
+          </p>
+          <div class="post-card-meta">
+            <ul class="post-card-authors">
+              <li>
+                <a href="/author/ghost-user/" title="Ghost"
+                  ><img src="https://demo.ghost.io/content/images/2017/07/ghost-icon.png" alt="Ghost"
+                /></a>
+              </li>
+            </ul>
+            <small class="post-card-reading-time">1 分钟读完</small>
+          </div>
+        </div>
+      </article>
+    </div>
+    <footer>
+      <a class="btn btn-outline-secondary" href="/page/2/">发现更多 <span aria-hidden="true">&rarr;</span></a>
+    </footer>
+  </div>
+</section>
+
+<section class="site-section">
+  <div class="container">
+    <article class="post-primary">
+      <figure class="post-primary-figure">
+        <a href="/2010/01/welcome/"
+          ><img src="https://casper.ghost.org/v2.0.0/images/welcome-to-ghost.jpg" alt="Welcome to Ghost"
+        /></a>
+      </figure>
+      <div class="post-primary-body">
+        <h2 class="post-primary-title">Welcome to Ghost</h2>
+        <div class="post-primary-content">
+          <p>👋 Welcome, it's great to have you here.</p>
+          <p>
+            We know that first impressions are important, so we've populated your new site with some initial
+            <strong>getting started</strong> posts that will help you get familiar with everything in no time.
+            This is the first one!
+          </p>
+          <p><strong>A few things you should know upfront</strong>:</p>
+          <ol>
+            <li>
+              Ghost is designed for ambitious, professional publishers who want to actively build a business
+              around their content. That's who it works best for.
+            </li>
+            <li>
+              The entire platform can be modified and customised to suit your needs. It's very powerful, but does
+              require some knowledge of code. Ghost is not necessarily a good
+            </li>
+          </ol>
+        </div>
+        <a class="btn btn-outline-secondary" href="/2010/01/welcome/"
+          >继续阅读 <span aria-hidden="true">&rarr;</span></a
+        >
       </div>
-      {% endfor %}
+    </article>
+  </div>
+</section>
+
+<section class="site-section">
+  <div class="container">
+    <header>
+      <h2>Tutorial</h2>
+      <p>Learn something fun together.</p>
+    </header>
+    <div class="post-feed">
+      <article class="post-card">
+        <figure class="post-card-figure">
+          <a href="/2010/01/welcome/" title="Welcome to Ghost">
+            <img
+              src="/assets/dist/empty.svg?v=7aa9d6624c"
+              alt="Welcome to Ghost"
+              data-src="https://casper.ghost.org/v2.0.0/images/welcome-to-ghost.jpg"
+            />
+          </a>
+        </figure>
+        <div class="post-card-body">
+          <a href="/2010/01/welcome/" class="post-card-link"></a>
+          <span class="post-card-tag">Tutorial</span>
+          <h3 class="post-card-title">Welcome to Ghost</h3>
+          <p class="post-card-excerpt">
+            Welcome, it's great to have you here. We know that first impressions are important, so we've populated
+            your new site with some initial getting started posts that will help you get familiar with everything
+            in no time....
+          </p>
+          <div class="post-card-meta">
+            <ul class="post-card-authors">
+              <li>
+                <a href="/author/zce/" title="汪磊"
+                  ><img src="https://zce-sandbox.uieee.com/2018/10/avatar-180.png" alt="汪磊"
+                /></a>
+              </li>
+            </ul>
+            <small class="post-card-reading-time">1 分钟读完</small>
+          </div>
+        </div>
+      </article>
+      <article class="post-card">
+        <figure class="post-card-figure">
+          <a href="/2010/01/the-editor/" title="Writing posts with Ghost ✍️">
+            <img
+              src="/assets/dist/empty.svg?v=7aa9d6624c"
+              alt="Writing posts with Ghost ✍️"
+              data-src="https://casper.ghost.org/v2.0.0/images/writing-posts-with-ghost.jpg"
+            />
+          </a>
+        </figure>
+        <div class="post-card-body">
+          <a href="/2010/01/the-editor/" class="post-card-link"></a>
+          <span class="post-card-tag">Tutorial</span>
+          <h3 class="post-card-title">Writing posts with Ghost ✍️</h3>
+          <p class="post-card-excerpt">
+            Getting started with the editor is simple, with familiar formatting options in a functional toolbar
+            and the ability to add dynamic content seamlessly....
+          </p>
+          <div class="post-card-meta">
+            <ul class="post-card-authors">
+              <li>
+                <a href="/author/zce/" title="汪磊"
+                  ><img src="https://zce-sandbox.uieee.com/2018/10/avatar-180.png" alt="汪磊"
+                /></a>
+              </li>
+            </ul>
+            <small class="post-card-reading-time">1 分钟读完</small>
+          </div>
+        </div>
+      </article>
+      <article class="post-card">
+        <figure class="post-card-figure">
+          <a href="/2010/01/publishing-options/" title="Publishing options">
+            <img
+              src="/assets/dist/empty.svg?v=7aa9d6624c"
+              alt="Publishing options"
+              data-src="https://casper.ghost.org/v2.0.0/images/publishing-options.jpg"
+            />
+          </a>
+        </figure>
+        <div class="post-card-body">
+          <a href="/2010/01/publishing-options/" class="post-card-link"></a>
+          <span class="post-card-tag">Tutorial</span>
+          <h3 class="post-card-title">Publishing options</h3>
+          <p class="post-card-excerpt">
+            The Ghost editor has everything you need to fully optimise your content. This is where you can add
+            tags and authors, feature a post, or turn a post into a page....
+          </p>
+          <div class="post-card-meta">
+            <ul class="post-card-authors">
+              <li>
+                <a href="/author/zce/" title="汪磊"
+                  ><img src="https://zce-sandbox.uieee.com/2018/10/avatar-180.png" alt="汪磊"
+                /></a>
+              </li>
+            </ul>
+            <small class="post-card-reading-time">2 分钟读完</small>
+          </div>
+        </div>
+      </article>
+      <article class="post-card">
+        <figure class="post-card-figure">
+          <a href="/2010/01/admin-settings/" title="Managing admin settings">
+            <img
+              src="/assets/dist/empty.svg?v=7aa9d6624c"
+              alt="Managing admin settings"
+              data-src="https://casper.ghost.org/v2.0.0/images/admin-settings.jpg"
+            />
+          </a>
+        </figure>
+        <div class="post-card-body">
+          <a href="/2010/01/admin-settings/" class="post-card-link"></a>
+          <span class="post-card-tag">Tutorial</span>
+          <h3 class="post-card-title">Managing admin settings</h3>
+          <p class="post-card-excerpt">
+            There are a couple of things to do next while you're getting set up: making your site private and
+            inviting your team....
+          </p>
+          <div class="post-card-meta">
+            <ul class="post-card-authors">
+              <li>
+                <a href="/author/zce/" title="汪磊"
+                  ><img src="https://zce-sandbox.uieee.com/2018/10/avatar-180.png" alt="汪磊"
+                /></a>
+              </li>
+            </ul>
+            <small class="post-card-reading-time">2 分钟读完</small>
+          </div>
+        </div>
+      </article>
+      <article class="post-card">
+        <figure class="post-card-figure">
+          <a href="/2010/01/organising-content/" title="Organising your content">
+            <img
+              src="/assets/dist/empty.svg?v=7aa9d6624c"
+              alt="Organising your content"
+              data-src="https://casper.ghost.org/v2.0.0/images/organising-your-content.jpg"
+            />
+          </a>
+        </figure>
+        <div class="post-card-body">
+          <a href="/2010/01/organising-content/" class="post-card-link"></a>
+          <span class="post-card-tag">Tutorial</span>
+          <h3 class="post-card-title">Organising your content</h3>
+          <p class="post-card-excerpt">
+            Ghost has a flexible organisational taxonomy called tags which can be used to configure your site
+            structure using dynamic routing....
+          </p>
+          <div class="post-card-meta">
+            <ul class="post-card-authors">
+              <li>
+                <a href="/author/zce/" title="汪磊"
+                  ><img src="https://zce-sandbox.uieee.com/2018/10/avatar-180.png" alt="汪磊"
+                /></a>
+              </li>
+            </ul>
+            <small class="post-card-reading-time">2 分钟读完</small>
+          </div>
+        </div>
+      </article>
+      <article class="post-card">
+        <figure class="post-card-figure">
+          <a href="/2010/01/apps-integrations/" title="Apps &amp; integrations">
+            <img
+              src="/assets/dist/empty.svg?v=7aa9d6624c"
+              alt="Apps &amp; integrations"
+              data-src="https://casper.ghost.org/v2.0.0/images/app-integrations.jpg"
+            />
+          </a>
+        </figure>
+        <div class="post-card-body">
+          <a href="/2010/01/apps-integrations/" class="post-card-link"></a>
+          <span class="post-card-tag">Tutorial</span>
+          <h3 class="post-card-title">Apps &amp; integrations</h3>
+          <p class="post-card-excerpt">
+            There are three primary ways to work with third-party services in Ghost: using Zapier, editing your
+            theme, or using the Ghost API....
+          </p>
+          <div class="post-card-meta">
+            <ul class="post-card-authors">
+              <li>
+                <a href="/author/zce/" title="汪磊"
+                  ><img src="https://zce-sandbox.uieee.com/2018/10/avatar-180.png" alt="汪磊"
+                /></a>
+              </li>
+            </ul>
+            <small class="post-card-reading-time">1 分钟读完</small>
+          </div>
+        </div>
+      </article>
+    </div>
+    <footer>
+      <a class="btn btn-outline-secondary" href="/topic/tutorial/"
+        >发现更多 <span aria-hidden="true">&rarr;</span></a
+      >
+    </footer>
+  </div>
+</section>
+
+<section class="site-section">
+  <div class="container">
+    <div class="post-secondary">
+      <h2>关于</h2>
+      <p>汪磊</p>
+      <p>自命有理想的手艺人。</p>
+      <p>秉承技术源自生活服务于生活的原则，喜欢尝试各种新玩意儿。重度强迫症（匠心精神）患者，乐于分享！</p>
+      <p>
+        微博：<a href="http://localhost:2368/%22https://weibo.com/zceme/%22">@汪磊同学</a><br />GitHub：<a
+          href="http://localhost:2368/%22https://github.com/zce/%22"
+          >@zce</a
+        >
+      </p>
+      <p>MAKE IT BETTER!</p>
+      <blockquote>P.S. 好多人问我 zce 是什么？我就是随意拼写的，你可以记作【找茬儿】</blockquote>
     </div>
   </div>
-</div>
+</section>
 {% endblock %}

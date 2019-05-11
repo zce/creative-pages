@@ -19,7 +19,7 @@
   {% block styles %}{% endblock %}
 </head>
 
-<body>
+<body class="{{ current | lower }}-template">
   <header class="site-header">
     {% include '../partials/site-nav.html' %}
     {% block header %}{% endblock %}
