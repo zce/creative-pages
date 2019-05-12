@@ -6059,7 +6059,7 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-open-color@^1.6.3:
+open-color@1.6.3:
   version "1.6.3"
   resolved "https://registry.npm.taobao.org/open-color/download/open-color-1.6.3.tgz#ff0d62983bcdda8048b776daedda2237e8a322ed"
   integrity sha1-/w1imDvN2oBIt3ba7doiN+ijIu0=
