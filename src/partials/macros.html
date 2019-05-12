@@ -1,0 +1,23 @@
+{% macro icon(name, size, stroke) %}
+<svg class="{{ className | default('icon') }}" width="{{ size | default(16) }}" height="{{ size | default(16) }}" fill="none" stroke="currentColor" stroke-width="{{ stroke | default(2.5) }}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <use xlink:href="assets/images/icons.svg#{{ name }}"></use>
+</svg>
+{% endmacro %}
+
+{% macro feather(name, size, stroke) %}
+<svg class="{{ className | default('icon-feather') }}" width="{{ size | default(16) }}" height="{{ size | default(16) }}" fill="none" stroke="currentColor" stroke-width="{{ stroke | default(2.5) }}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <use xlink:href="assets/images/feather.svg#{{ name }}"></use>
+</svg>
+{% endmacro %}
+
+{% macro brand(name, size) %}
+<svg class="{{ className | default('icon-brand') }}" width="{{ size | default(16) }}" height="{{ size | default(16) }}" fill="currentColor" aria-hidden="true">
+  <use xlink:href="assets/images/brands.svg#{{ name }}"></use>
+</svg>
+{% endmacro %}
+
+{% macro thumbnail(text, size) %}
+<svg class="{{ className | default('thumbnail') }}" aria-hidden="true">
+  <text text-anchor="middle" x="50%" y="50%" font-size="{{ size | default('3em') }}">{{ text }}</text>
+</svg>
+{% endmacro %}
