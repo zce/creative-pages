@@ -1,15 +1,15 @@
 {% import '../partials/macros.html' as macros %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.lang }}">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="zce">
-  <title>{{ current | title }} · {{ site.title | title }}</title>
+  <title>{{ current | title }} &bull; {{ site.title | title }}</title>
 
-  <!-- build:css assets/styles/main.css -->
+  <!-- build:css assets/css/style.css -->
   <link rel="stylesheet" href="assets/styles/main.css">
   <!-- endbuild -->
 
@@ -17,10 +17,7 @@
 </head>
 
 <body class="{{ current | lower }}-template">
-  <header class="site-header">
-    {% include '../partials/site-nav.html' %}
-    {% block header %}{% endblock %}
-  </header>
+  {% include '../partials/site-header.html' %}
 
   <main class="site-main" role="main">
     {% block body %}{% endblock %}
@@ -28,12 +25,12 @@
 
   {% include '../partials/site-footer.html' %}
 
-  <!-- build:js assets/scripts/vendor.js -->
+  <!-- build:js assets/js/vendor.js -->
   <script src="/node_modules/jquery/dist/jquery.js"></script>
   <script src="/node_modules/popper.js/dist/umd/popper.js"></script>
   <script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
   <!-- endbuild -->
-  <!-- build:js assets/scripts/main.js -->
+  <!-- build:js assets/js/main.js -->
   <script src="assets/scripts/main.js"></script>
   <!-- endbuild -->
 

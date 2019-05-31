@@ -1,0 +1,74 @@
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      {# <a class="navbar-brand" href="index.html">{{ site.title }}</a> #}
+      <a class="navbar-brand" href="index.html"><img class="site-logo" src="https://img.zce.me/logo.svg" alt="{{ site.title }}"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#site_menu" aria-controls="site_menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="site_menu">
+        <ul class="navbar-nav mb-3 mb-lg-0" role="menu">
+          {% for item in site.menus %}
+          {% set isCurrent = current === item.name | lower %}
+          <li class="nav-item{% if item.children %} dropdown{% endif %}{% if isCurrent %} active{% endif %}" role="menuitem">
+            <a class="nav-link{% if item.children %} dropdown-toggle{% endif %}" href="{{ item.link }}"{% if item.children %} id="nav-{{ item.name | lower }}-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{% endif %}{% if isCurrent %} aria-current="page"{% endif %}>{{ item.name }}</a>
+            {% if item.children %}
+            <div class="dropdown-menu" aria-labelledby="nav-{{ item.name | lower }}-dropdown">
+              {% for item in item.children %}
+              {% if item.name === 'divider' %}
+              <div class="dropdown-divider"></div>
+              {% else %}
+              <a class="dropdown-item" href="{{ item.link }}" target="_brank">{{ item.name }}</a>
+              {% endif %}
+              {% endfor %}
+            </div>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        <form class="ml-auto mr-lg-3">
+          <input class="form-control" id="search_input" name="q" type="search" autocomplete="off" placeholder="Search" aria-label="Search">
+          {# <label for="search_input">{{ macros.icon('search') }}</label> #}
+        </form>
+        <div class="text-center">
+          <a class="btn btn-outline-light m-3 m-lg-0" href="#signin">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+{# <nav class="site-nav navbar navbar-expand-md navbar-light">
+    <div class="container">
+      <!-- <a class="navbar-brand" href="index.html">{{ site.title }}</a> -->
+      <a class="navbar-brand" href="index.html"><img class="align-top" src="https://img.zce.me/logo.svg" alt="{{ site.title }}"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#site_nav" aria-controls="site_nav" aria-expanded="false" aria-label="Toggle navigation"><i class="navbar-toggler-icon"></i></button>
+      <div class="navbar-collapse collapse" id="site_nav">
+        <ul class="navbar-nav" role="menu">
+          {% for item in site.menus %}
+          {% set isCurrent = current === item.name | lower %}
+          <li class="nav-item nav-{{ item.name | lower }}{% if item.children %} dropdown{% endif %}{% if isCurrent %} active{% endif %}" role="menuitem">
+            <a class="nav-link{% if item.children %} dropdown-toggle{% endif %} d-flex align-items-center" href="{{ item.link }}"{% if item.children %} id="nav_{{ item.name | lower }}_dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{% endif %}{% if isCurrent %}  aria-current="page"{% endif %}>{% if item.icon %}<i class="icon-{{ item.icon }} mr-1"></i> {% endif %}{{ item.name }}</a>
+            {% if item.children %}
+            <div class="dropdown-menu" aria-labelledby="nav_{{ item.name | lower }}_dropdown">
+              {% for item in item.children %}
+              {% if item.name === 'divider' %}
+              <div class="dropdown-divider"></div>
+              {% else %}
+              <a class="dropdown-item" href="{{ item.link }}">{{ item.name }}</a>
+              {% endif %}
+              {% endfor %}
+            </div>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        <form class="search" action="search.html">
+          <input class="form-control" id="search_input" name="q" type="search" autocomplete="off" placeholder="Search" data-empty="No results" aria-label="Search">
+          <label for="search_input">{{ macros.icon('search') }}</label>
+        </form>
+        <a class="btn btn-outline-secondary" href="#signin">Sign In</a>
+        <a class="btn btn-outline-secondary" href="#signout">Sign Out</a>
+      </div>
+    </div>
+  </nav> #}

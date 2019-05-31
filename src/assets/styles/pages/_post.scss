@@ -1,22 +1,3 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the post page.
 // -----------------------------------------------------------------------------
-
-.post-template {
-  .site-cover::before {
-    filter: blur(0.5rem);
-    transform: translateZ(0) scale(1.0825);
-  }
-
-  :not(.post-figure) + .post-content > .kg-card:first-child {
-    position: relative;
-
-    @each $breakpoint, $size in $content-breakpoints {
-      @include media-breakpoint-up($breakpoint) {
-        top: (- map-get($size, padding-y));
-        margin-right: (- map-get($size, padding-x));
-        margin-left: (- map-get($size, padding-x));
-      }
-    }
-  }
-}

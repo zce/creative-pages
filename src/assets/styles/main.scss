@@ -41,29 +41,22 @@
 // components
 // --------------------------------------------------
 
-@import 'components/buttons';
+@import 'components/button';
+@import 'components/dropdown';
 @import 'components/navigation';
 @import 'components/pagination';
-@import 'components/dropdown';
 @import 'components/prism';
+@import 'components/card';
 @import 'components/subscribe';
-@import 'components/koenig';
-@import 'components/post';
-@import 'components/tag-card';
 
 // pages
 // --------------------------------------------------
 
 @import 'pages/home';
-@import 'pages/index';
-@import 'pages/tag';
-@import 'pages/author';
+@import 'pages/blog';
+@import 'pages/archive';
 @import 'pages/page';
 @import 'pages/post';
-@import 'pages/custom';
-@import 'pages/amp';
-@import 'pages/subscribe';
-@import 'pages/private';
 @import 'pages/error';
 
 // themes

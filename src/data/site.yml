@@ -2,6 +2,7 @@ title: Creative
 subtitle: Lei's Creative Pages
 description: A creative pages for adapting to different platforms
 url: https://zce.me
+lang: zh-Hans
 
 author:
   name: zce
@@ -12,7 +13,6 @@ date: 2019-05-10 00:00:00
 
 menus:
   - name: Home
-    icon: aperture
     link: index.html
   - name: Features
     link: features.html
