@@ -36,7 +36,7 @@
     "bootstrap": "4.3.1",
     "jquery": "3.4.1",
     "open-color": "1.7.0",
-    "popper.js": "1.15.0"
+    "popper.js": "1.16.0"
   },
   "devDependencies": {
     "x-pages": "0.8.1"
